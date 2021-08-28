@@ -1,7 +1,8 @@
-const Home = () => {
-    return ( <div> Welcome
-    <p> Hello  </p>
-    </div>);
+export default function Header(){
+    return (
+        <header>
+            <h1>Header</h1>
+            <p>lorem</p>
+        </header>
+    )
 }
- 
-export default Home;
