@@ -1,0 +1,50 @@
+.slider {
+    position: relative;
+}
+
+.slider_Wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: #ED165F;
+    padding-bottom: 10em;
+}
+
+.slider_Wrapper img {
+    object-fit: cover;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.ant-carousel .slick-dots-bottom {
+    bottom: 8em;
+}
+
+.ant-carousel .slick-dots li button{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: transparent;
+    opacity: 1;
+    border: 2px solid #fff;
+}
+
+.ant-carousel .slick-dots li{
+    margin: 0 .5em;
+}
+
+.ant-carousel .slick-dots li.slick-active {
+    width: 16px;
+}
+
+.slider_floatText {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 1em;
+    cursor: pointer;
+}
+
+.slider_floatText h3 {
+    color: #fff;
+}
