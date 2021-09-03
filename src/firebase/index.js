@@ -1,6 +1,6 @@
-import Firebase from './firebase';
+// import Firebase from './firebase';
 import FirebaseContext from './context';
+import { useContext } from 'react';
 
-export default Firebase;
-
-export { FirebaseContext };
+// export default Firebase;
+export const useStateValue = ()=>useContext(FirebaseContext);
