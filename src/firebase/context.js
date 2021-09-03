@@ -1,4 +1,4 @@
-import React, { useReducer, useContext } from "react";
+import React, { useReducer } from "react";
 
 const FirebaseContext = React.createContext();
 export const initialState = {
