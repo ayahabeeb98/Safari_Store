@@ -30,30 +30,28 @@
 }
 
 .sub-title{
+	display: block;
 	text-align: center;
-	vertical-align: top;
 	width: 70%;
-	margin-left: 11em;
+	margin: auto;
 	font-size: 24px;
 	font-weight: 400;
 }
+@media only screen and (max-width: 768px) {
+	.sub-title{
+		font-size: 15px;
+		width: 85%;
+	}
+}
 .cards-section {
-	//display: grid;
-	//grid-template-columns: repeat(4, minmax(0, 1fr));
-	//grid-column-gap: 0.5rem;
-	//grid-row-gap: 2rem;
-	//align-items: center;
 	margin: 4em;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 3em;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(297px, 1fr) );
+	grid-gap: 7em 3.57em;
+	text-align: center;
 }
-Card{
-	flex: 0 1 calc(25% - 1em);
-	padding: 1rem;
-}
+
 .ant-card-cover img{
-	height: 457px;
-	max-height: 348px;
+	height: 455px;
+	object-fit: cover;
 }
