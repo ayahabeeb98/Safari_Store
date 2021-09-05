@@ -19,7 +19,6 @@ function reducer(state, action) {
 	}
 }
 export default  function useFetch(params){
-	console.log(params,'param')
 	const [state, dispatch] = useReducer(reducer,initialState );
 	useEffect(()=>{
 		dispatch({type:"make_request"})
@@ -27,8 +26,6 @@ export default  function useFetch(params){
 			params:{...params }
 		}).then(res=>{
 			dispatch({type:"get_data" , payload:{productCards:res.data} })
-			console.log(res,'res   ')
-
 		}) .catch(e => {
 			dispatch({type:"error", payload: {error: e} })
 		})

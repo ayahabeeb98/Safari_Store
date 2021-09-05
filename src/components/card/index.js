@@ -19,11 +19,13 @@ export default function CardProduct() {
 
 		<>
 			<div className='header-title'><span>Shop your style</span></div>
-			<p className='sub-title'>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae gravida cursus adipiscing
-				viverra at tortor, egestas odio parturient. Morbi ut lorem in erat. Et et molestie diam diam ultricies.
-				Scelerisque duis diam ac cras dictum adipiscing. Venenatis at sit proin ut vitae adipiscing id facilisis.
-			</p>
+			<div className='sub-title'>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae gravida cursus adipiscing
+					viverra at tortor, egestas odio parturient. Morbi ut lorem in erat. Et et molestie diam diam ultricies.
+					Scelerisque duis diam ac cras dictum adipiscing. Venenatis at sit proin ut vitae adipiscing id facilisis.
+				</p>
+			</div>
 			<div className='cards-section'>
 				{loading &&
 				[...Array(10)].map((x, i) =>
@@ -32,8 +34,7 @@ export default function CardProduct() {
 				{productCards && productCards.map( (card) =>
 					<Card
 						hoverable
-						style={{ width: 300 }}
-						cover={<img alt="example" src={card.img} />}
+						cover={<img alt={card.title}  src={card.img} />}
 					>
 						<Meta title={card.title} description={card.price+'₦'}  />
 					</Card>)
