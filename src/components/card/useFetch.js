@@ -18,6 +18,13 @@ function reducer(state, action) {
 			return state
 	}
 }
+
+// useEffect(()=> {
+// 	(async ()=> {
+// 		const products = await productCards
+// 		setPaginationStates()
+// 	})()
+// }, []);
 export default  function useFetch(params){
 	const [state, dispatch] = useReducer(reducer,initialState );
 	useEffect(()=>{
