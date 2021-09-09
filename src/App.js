@@ -7,12 +7,14 @@ import BaseLayout from "./layouts/BaseLayout";
 import Registration from './pages/registaration';
 import { useStateValue } from './firebase';
 import { auth } from './firebase/firebase';
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
+import React from 'react'
 
 
 function App() {
   const {dispatch}= useStateValue();
-  
+    
+
   useEffect(() => {
     auth.onAuthStateChanged(authUser =>{
       console.log("the user is >>>>", authUser);
@@ -32,11 +34,12 @@ function App() {
   }, [])
   return (
     <Router>
-        <Switch>
+      <Switch>
             <RouteWrapper path="/" exact component={Home} layout={BaseLayout}/>
             <RouteWrapper path="/register" exact component={Registration} layout={BaseLayout}/>
         </Switch>
-    </Router>
+      </Router>
+     
   );
 }
 
