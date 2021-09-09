@@ -1,5 +1,5 @@
-import React, { useReducer } from "react";
-
+import React, { useReducer,useState,useEffect } from "react";
+import firebase from './firebase'
 const FirebaseContext = React.createContext();
 export const initialState = {
   user: null,
